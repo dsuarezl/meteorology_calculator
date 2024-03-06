@@ -1,5 +1,5 @@
 from .heatwave_calculator import HeatWaveCalculator
-import utils
+from ..utils import fahrenheit_to_celsius
 
 class HeatwavesAbsoluteCalculator(HeatWaveCalculator):
 
@@ -10,7 +10,7 @@ class HeatwavesAbsoluteCalculator(HeatWaveCalculator):
 
         heatwave_threshold = float(heatwave_threshold)
 
-        threshold_temp = utils.fahrenheit_to_celsius(heatwave_threshold)
+        threshold_temp = fahrenheit_to_celsius(heatwave_threshold)
         
 
         def detect_heatwaves(group):

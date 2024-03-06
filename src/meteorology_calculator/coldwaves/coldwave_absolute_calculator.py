@@ -1,4 +1,4 @@
-import utils
+from ..utils import fahrenheit_to_celsius
 from .coldwave_calculator import ColdWaveCalculator
 from numba import jit
 
@@ -9,7 +9,7 @@ class ColdwavesAbsoluteCalculator(ColdWaveCalculator):
             raise ValueError("coldwave_threshold is None")
 
         coldwave_threshold = float(coldwave_threshold)
-        threshold_temp = utils.fahrenheit_to_celsius(coldwave_threshold)
+        threshold_temp = fahrenheit_to_celsius(coldwave_threshold)
 
         def detect_coldwaves(group):
             group = group.sort_values(by=['year', 'month', 'day'])
