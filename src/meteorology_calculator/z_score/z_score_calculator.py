@@ -19,11 +19,12 @@ class ZScore(MeteorologyCalculator, ABC):
     def plot(self, df, plot_type="scatter map", time_group = "daily", **kwargs):
 
         if plot_type is None:
-            raise ValueError("No plot type set")
+            plot_type="scatter map"
+        
 
-        if time_group is None:
-            raise ValueError("No time group type set")
-
+        if(time_group is None):
+            time_group = "daily"
+            
         time_group_conversion = {
             "daily": "day",
             "monthly": "month",

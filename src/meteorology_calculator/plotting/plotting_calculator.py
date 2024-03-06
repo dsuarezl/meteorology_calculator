@@ -12,9 +12,8 @@ class PlottingCalculator(MeteorologyCalculator):
     
 
     def plot(self, df, plot_type="scatter map", time_group = "daily", **kwargs):
-        if(plot_type is None):
-            raise ValueError("No plot type set")
-        
+        if plot_type is None:
+            plot_type="scatter map"
         
         if plot_type == 'density map':
             # Directly use df without summing data or sorting by time group

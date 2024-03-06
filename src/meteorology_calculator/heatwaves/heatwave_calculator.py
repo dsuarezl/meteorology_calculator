@@ -19,12 +19,12 @@ class HeatWaveCalculator(MeteorologyCalculator, ABC):
     
 
     def plot(self, df, plot_type="scatter map", time_group = "daily", **kwargs):
-        if(plot_type is None):
-            raise ValueError("No plot type set")
+        if plot_type is None:
+            plot_type="scatter map"
         
         
         if(time_group is None):
-            raise ValueError("No time group type set")
+            time_group = "daily"
         
         time_group_conversion = {   
             "daily" : "day",
