@@ -9,7 +9,7 @@ setup(
     name='meteorology_calculator',
     version='0.1',
     package_dir={'': 'src'},
-    packages=found_packages
+    packages=found_packages,
     install_requires=[
         'numpy',
         'pandas',
