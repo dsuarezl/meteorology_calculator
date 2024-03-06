@@ -3,7 +3,7 @@ from ..utils import fahrenheit_to_celsius
 
 class HeatwavesAbsoluteCalculator(HeatWaveCalculator):
 
-    def _specific_calculate(self, data_frame, consecutive_days, heatwave_threshold=None, **kwargs):
+    def _specific_calculate(self, data_frame, consecutive_days = 3, heatwave_threshold=None, **kwargs):
 
         if heatwave_threshold is None:
             raise ValueError("heatwave_threshold is None")

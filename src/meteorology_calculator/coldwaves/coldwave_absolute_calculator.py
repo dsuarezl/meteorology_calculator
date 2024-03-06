@@ -4,7 +4,7 @@ from numba import jit
 
 class ColdwavesAbsoluteCalculator(ColdWaveCalculator):
 
-    def _specific_calculate(self, data_frame, consecutive_days, coldwave_threshold=None, **kwargs):
+    def _specific_calculate(self, data_frame, consecutive_days = 3, coldwave_threshold=None, **kwargs):
         if coldwave_threshold is None:
             raise ValueError("coldwave_threshold is None")
 

@@ -3,7 +3,7 @@ from .coldwave_calculator import ColdWaveCalculator
 
 class ColdwavesDailyPercentileCalculator(ColdWaveCalculator):
 
-    def _specific_calculate(self, data_frame, consecutive_days, coldwave_daily_percentile=None, **kwargs):
+    def _specific_calculate(self, data_frame, consecutive_days = 3, coldwave_daily_percentile=None, **kwargs):
         if coldwave_daily_percentile is None:
             raise ValueError("coldwave_daily_percentile is None")
 

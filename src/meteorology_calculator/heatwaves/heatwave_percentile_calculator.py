@@ -2,7 +2,7 @@ from .heatwave_calculator import HeatWaveCalculator
 
 class HeatwavesPercentileCalculator(HeatWaveCalculator):
 
-    def _specific_calculate(self, data_frame,  consecutive_days, selected_data_date_range = None, heatwave_percentile=None, **kwargs):
+    def _specific_calculate(self, data_frame,  consecutive_days = 3, selected_data_date_range = None, heatwave_percentile=None, **kwargs):
 
         if  heatwave_percentile is None:
             raise ValueError("heatwave_percentile is None")
