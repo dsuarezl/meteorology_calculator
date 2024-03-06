@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "meteorology_calculator"
+version = "0.1.0"
+description = "A comprehensive meteorology calculation module for various weather-related calculations."
+authors = [{name = "Daniel Suarez", email = "dsuarezl@ull.edu.es"}]
+license = "MIT"
+dependencies = [
+    "numpy",
+    "pandas",
+    "scikit-learn"
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[tool.setuptools]
+packages = find_namespace:
+package_dir = {"": "src"}
+include_package_data = true
