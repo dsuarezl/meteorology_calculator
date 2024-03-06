@@ -11,7 +11,7 @@ class PlottingCalculator(MeteorologyCalculator):
         return data_frame
     
 
-    def plot(self, df, plot_type=None, time_group = None, **kwargs):
+    def plot(self, df, plot_type="scatter map", time_group = "daily", **kwargs):
         if(plot_type is None):
             raise ValueError("No plot type set")
         

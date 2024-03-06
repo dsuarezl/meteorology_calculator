@@ -14,7 +14,7 @@ class ColdWaveCalculator(MeteorologyCalculator, ABC):
         result_df = self._specific_calculate(data_frame, consecutive_days, **kwargs)
         return result_df
 
-    def plot(self, df, plot_type=None, time_group=None, **kwargs):
+    def plot(self, df, plot_type="scatter map", time_group="daily", **kwargs):
         if plot_type is None:
             raise ValueError("No plot type set")
         if time_group is None:
