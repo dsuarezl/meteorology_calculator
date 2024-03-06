@@ -3,14 +3,8 @@ from setuptools import setup, find_packages
 setup(
     name='meteorology_calculator',
     version='0.1',
-    packages=[
-        'meteorology_calculator', 
-        'meteorology_calculator.anomaly',
-        'meteorology_calculator.coldwaves',
-        'meteorology_calculator.heatwaves',
-        'meteorology_calculator.plotting',
-        'meteorology_calculator.z_score'
-    ],
+    package_dir={'': 'src'},  # Tells setuptools that packages are under src
+    packages=find_packages(where='src'),  # Finds packages in src
     install_requires=[
         'numpy',
         'pandas',
