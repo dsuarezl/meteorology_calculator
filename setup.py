@@ -9,7 +9,15 @@ setup(
     name='meteorology_calculator',
     version='0.1',
     package_dir={'': 'src'},
-    packages=found_packages,
+    packages=[
+        'meteorology_calculator',  # El paquete principal
+        'meteorology_calculator.anomaly',  # Subpaquete anomaly
+        'meteorology_calculator.coldwaves',  # Subpaquete coldwaves
+        'meteorology_calculator.heatwaves',  # Subpaquete heatwaves
+        'meteorology_calculator.plotting',  # Subpaquete plotting
+        'meteorology_calculator.z_score',  # Subpaquete z_score
+        # Añade aquí otros subpaquetes según sea necesario
+    ],
     install_requires=[
         'numpy',
         'pandas',
