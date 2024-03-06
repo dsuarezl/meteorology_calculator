@@ -1,10 +1,15 @@
 from setuptools import setup, find_packages
 
+
+# Debugging: Print found packages
+found_packages = find_packages(where='src')
+print("Found packages:", found_packages)
+
 setup(
     name='meteorology_calculator',
     version='0.1',
-    package_dir={'': 'src'},  # Tells setuptools that packages are under src
-    packages=find_packages(where='src'),  # Finds packages in src
+    package_dir={'': 'src'},
+    packages=found_packages,
     install_requires=[
         'numpy',
         'pandas',
