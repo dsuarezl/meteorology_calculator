@@ -20,6 +20,6 @@ classifiers = [
 ]
 
 [tool.setuptools]
-packages = find_namespace:
-package_dir = {"": "src"}
+find_namespace_packages = true
+package_dir = {"" = "src"}
 include_package_data = true
